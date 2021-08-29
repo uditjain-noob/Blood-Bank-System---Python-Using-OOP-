@@ -91,6 +91,7 @@ class Admin:
         print(150*"=")
 
     def donorinfo(self, donorname, donorlist):
+        print(150*"=")
         for i in range(len(donorlist)):
             if donorname == donorlist[i].name:
                 idx = i
@@ -99,6 +100,7 @@ class Admin:
             print("Donor Not Found")
             return
         donorlist[idx].donordetails()
+        print(150*"=")
 
     def recipientinfo(self, recname, recipientlist):
         for i in range(len(recipientlist)):
@@ -114,9 +116,11 @@ class Admin:
         pass
 
     def getbloodtype(self, bloodtype, bank):
+        print("="*150)
         print(f"Information on: {bloodtype}")
         for i in bank.listhospital:
             print(f"{i.name} -> {i.storage[bloodtype]}")
+        print(150*"=")
 
 class Donor:
 
